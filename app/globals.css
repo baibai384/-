@@ -1,2 +1,7 @@
-:root { --ink:#252120; --paper:#f7f2e9; --pink:#f7a9b8; --red:#d95363; --line:#d8cec0; }
-*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"Microsoft YaHei","PingFang SC",sans-serif} a{color:inherit} code{font-family:Consolas,monospace}
+:root{color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#050505}
+body{margin:0;background:#050505;color:#f4f4f0;font-family:Arial,"Helvetica Neue","Microsoft YaHei","PingFang SC",sans-serif}
+a{color:inherit}
+code{font-family:Consolas,"SFMono-Regular",monospace}
+::selection{background:#d8ff3e;color:#050505}

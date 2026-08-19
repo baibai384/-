@@ -11,13 +11,15 @@ export default function Home() {
     <main>
       <nav className="top-nav" aria-label="教程章节导航"><a href="#top" className="brand">键盘皮肤教程</a><div><a href="#prepare">准备</a><a href="#background">换背景</a><a href="#layouts">按键图</a><a href="#replace">完整流程</a><a href="#trouble">排错</a></div></nav>
       <header className="hero" id="top">
+        <div className="hero-meta"><span>ISSUE 01 / 2026</span><span>DESIGN YOUR INPUT</span></div>
         <div className="eyebrow">APPLE KEYBOARD SKIN · BEGINNER GUIDE</div>
-        <h1>苹果键盘皮肤制作<br /><span>零基础图文教程</span></h1>
-        <p>先认识底包，再一次只改一项。每一步都告诉你改什么、在哪里改、怎么检查。</p>
+        <h1>键盘皮肤<br /><span>制作指南</span></h1>
+        <p>从底包结构到视觉替换。用最清晰的路径，做出真正属于你的输入界面。</p>
         <div className="hero-actions">
           <a className="primary" href="#background">先学更换背景</a>
           <a className="secondary" href="#roadmap">查看学习路线</a>
         </div>
+        <div className="key-orbit" aria-hidden="true">{Array.from({ length: 10 }).map((_, i) => <i key={i} />)}<b>CREATE<br/>YOUR KEY</b></div>
       </header>
       <section className="quick-grid" id="roadmap">
         <article><b>01</b><h2>打开底包</h2><p>下载、改名、解压，找到 skin。</p></article>
