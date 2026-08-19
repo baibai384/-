@@ -18,8 +18,8 @@ export default function Home() {
         <h1>键盘皮肤<br /><span>制作指南</span></h1>
         <p>从底包结构到视觉替换。用最清晰的路径，做出真正属于你的输入界面。</p>
         <div className="hero-actions">
-          <a className="primary" href="#background">先学更换背景</a>
-          <a className="secondary" href="#roadmap">查看学习路线</a>
+          <a className="primary" href="#prepare">从第一章开始</a>
+          <a className="secondary" href="#outline">查看课程总纲</a>
         </div>
         <div className="key-orbit" aria-hidden="true">{Array.from({ length: 10 }).map((_, i) => <i key={i} />)}<b>CREATE<br/>YOUR KEY</b></div>
       </header>
