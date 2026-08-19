@@ -1,4 +1,31 @@
 /* 统一章节编号，让读者始终知道自己位于教程的哪一步。 */
+.key-orbit{
+  animation:orbit-safe-spin 20s linear infinite!important;
+  -webkit-animation:orbit-safe-spin 20s linear infinite!important;
+  transform-origin:50% 50%;
+  -webkit-transform-origin:50% 50%;
+  will-change:transform;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  perspective:1000px;
+  -webkit-perspective:1000px;
+}
+@keyframes orbit-safe-spin{
+  from{transform:translateZ(0) rotate(0deg)}
+  to{transform:translateZ(0) rotate(360deg)}
+}
+@-webkit-keyframes orbit-safe-spin{
+  from{-webkit-transform:translateZ(0) rotate(0deg)}
+  to{-webkit-transform:translateZ(0) rotate(360deg)}
+}
+@keyframes orbit-mobile-spin{
+  from{transform:translateZ(0) scale(.75) rotate(0deg)}
+  to{transform:translateZ(0) scale(.75) rotate(360deg)}
+}
+@-webkit-keyframes orbit-mobile-spin{
+  from{-webkit-transform:translateZ(0) scale(.75) rotate(0deg)}
+  to{-webkit-transform:translateZ(0) scale(.75) rotate(360deg)}
+}
 #prepare .chapter-kicker,#layouts .chapter-kicker,#replace .chapter-kicker,#trouble .chapter-kicker{font-size:0}
 #prepare .chapter-kicker:after{content:"01 · 准备与备份 / BEFORE START";font-size:11px}
 #layouts .chapter-kicker:after{content:"04 · 制作按键 / KEY LAYOUT";font-size:11px}
@@ -20,6 +47,7 @@ figure:has(img[src="/tutorial/file-map.jpg"]){display:none}
 .faq-section{background:#0b0b0b}.faq-list{border-top:1px solid var(--line)}.faq-list details{border-color:var(--line)}.faq-list summary{color:var(--white)}.faq-list details>div{color:#aaa}.faq-list code{color:var(--acid)}
 .sticker-tools{background:#ecece7;color:#090909}.sticker-tools .chapter-kicker{color:#555}.sticker-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#999}.sticker-overview article{min-height:230px;padding:20px;background:#ecece7}.sticker-overview article:nth-child(even){background:#d0d0cb}.sticker-overview b{font:700 11px Consolas}.sticker-overview h3{margin:100px 0 7px}.sticker-overview p{font-size:12px;line-height:1.6;color:#666}.tool-lessons{margin-top:50px;border-top:1px solid #999}.tool-lessons>article{display:grid;grid-template-columns:110px 1fr 1.4fr;gap:25px;padding:30px 0;border-bottom:1px solid #999}.tool-lessons span{font:700 11px Consolas}.tool-lessons h3{margin:0;font-size:26px}.tool-lessons ol{margin:0;line-height:1.8;color:#555}.tool-tip{grid-column:2/4;padding:16px;background:#090909;color:#eee;font-size:12px;line-height:1.6}.sticker-check{margin-top:30px;padding:28px;background:var(--acid);color:var(--black)}.sticker-check h3{margin-top:0}.sticker-check ul{margin-bottom:0;line-height:1.9}
 @media(max-width:900px){
+  .key-orbit{animation:orbit-mobile-spin 12s linear infinite!important;-webkit-animation:orbit-mobile-spin 12s linear infinite!important}
   .outline-grid{grid-template-columns:1fr 1fr!important}
   .outline-heading{grid-template-columns:1fr!important}
   .outline-route{align-items:flex-start!important;flex-direction:column}
