@@ -1,0 +1,29 @@
+:root{--ink:#050505;--paper:#f2f2ee;--acid:#d8ff3e;--line:#3b3b3b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--ink)}
+body{margin:0;background:var(--ink);color:var(--paper);font-family:Arial,"Microsoft YaHei",sans-serif}
+main{max-width:1440px;margin:auto;padding:16px;overflow:hidden}
+nav{top:12px;height:48px;padding:0 20px;border:1px solid #ffffff28;border-radius:2px;background:#080808e8;backdrop-filter:blur(18px);align-items:center;text-transform:uppercase;letter-spacing:.08em}
+nav a{font-size:11px;color:var(--paper)}
+nav a:hover,.kicker{color:var(--acid)}
+.hero{min-height:800px;margin-top:12px;padding:48px 5%;border:1px solid var(--line);border-radius:0;background:linear-gradient(90deg,transparent 49.8%,#ffffff12 50%,transparent 50.2%),#050505;position:relative;overflow:hidden}
+.hero:after{content:"CREATE YOUR KEY";position:absolute;right:7%;top:12%;width:250px;height:250px;border:1px solid #ffffff35;border-radius:50%;display:grid;place-items:center;text-align:center;font:900 20px/1 Arial;letter-spacing:-.03em;box-shadow:0 0 0 40px #ffffff08,0 0 0 80px #ffffff04}
+h1{font:900 clamp(72px,12vw,172px)/.8 Arial,"Microsoft YaHei",sans-serif;letter-spacing:-.085em;margin:200px 0 42px;text-transform:uppercase;position:relative;z-index:2}
+h1 span{color:transparent;-webkit-text-stroke:1px var(--paper)}
+.hero p{max-width:440px;margin-left:auto;color:#aaa;font-size:15px;line-height:1.8}
+.hero a{float:right;border-radius:0;border:1px solid var(--paper);background:var(--paper);color:var(--ink);padding:14px 20px;font:700 11px Consolas;text-transform:uppercase}
+.chapter{max-width:none;margin:0;padding:100px 5%;border-top:1px solid var(--line)}
+.chapter:nth-of-type(even){background:var(--paper);color:var(--ink)}
+h2{font:900 clamp(48px,7vw,104px)/.9 Arial,"Microsoft YaHei",sans-serif;letter-spacing:-.065em;margin:18px 0 44px}
+.lead{font-size:17px;line-height:1.85;max-width:760px}
+.path,.path.alt{border-radius:0;border:0;border-top:1px solid var(--line);background:transparent;color:inherit;padding:22px 0}
+.path:first-of-type{border-top-color:var(--acid)}
+.note{border:1px solid var(--line);border-left:4px solid var(--acid);background:transparent;border-radius:0}
+.cards{gap:1px;background:#aaa}.cards article{border:0;border-radius:0;background:inherit;color:inherit;min-height:190px;padding:22px}.cards article:nth-child(even){filter:brightness(.9)}
+.steps{padding:0;list-style:none}.steps li{border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;padding:20px 0}
+.grid{grid-template-columns:repeat(12,1fr);gap:14px}.grid figure{grid-column:span 6}.grid figure:nth-child(n+3){grid-column:span 4}
+figure{border:1px solid var(--line);border-radius:0;background:#171717;padding:8px}figure img{border-radius:0;filter:grayscale(100%);transition:.35s}figure:hover img{filter:none}figcaption{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#999}
+.chapter:nth-of-type(even) figure{background:#ddd}.chapter:nth-of-type(even) .note{background:transparent}
+.safe{border-radius:0;background:var(--acid);color:var(--ink)}
+footer{border-color:var(--line);display:flex;justify-content:space-between}
+@media(max-width:720px){main{padding:8px}.hero{min-height:680px;padding:36px 22px}.hero:after{right:-90px;top:10%;opacity:.55}h1{font-size:62px;margin-top:260px}.hero p{margin-left:0}.chapter{padding:72px 20px}.grid,.cards{grid-template-columns:1fr}.grid figure,.grid figure:nth-child(n){grid-column:auto}h2{font-size:48px}}
