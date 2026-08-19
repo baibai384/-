@@ -1,0 +1,37 @@
+/* 统一章节编号，让读者始终知道自己位于教程的哪一步。 */
+#prepare .chapter-kicker,#layouts .chapter-kicker,#replace .chapter-kicker,#trouble .chapter-kicker{font-size:0}
+#prepare .chapter-kicker:after{content:"01 · 准备与备份 / BEFORE START";font-size:11px}
+#layouts .chapter-kicker:after{content:"04 · 制作按键 / KEY LAYOUT";font-size:11px}
+#replace .chapter-kicker:after{content:"08 · 其他素材 / OTHER ASSETS";font-size:11px}
+#trouble .chapter-kicker:after{content:"09 · 打包与排错 / TROUBLESHOOTING";font-size:11px}
+#prepare h2:after,#file-manifest h2:after,#background h2:after,#layouts h2:after,#day-night h2:after,#animation h2:after,#replace h2:after,#trouble h2:after{display:block;margin-top:18px;font:500 13px/1.75 Arial,"Microsoft YaHei",sans-serif;letter-spacing:0;color:#777}
+#prepare h2:after{content:"本章目标：打开底包、认识目录，并先做好可以随时恢复的备份。"}
+#file-manifest h2:after{content:"本章目标：知道想修改哪一部分时，应该找到并替换哪些具体文件。"}
+#background h2:after{content:"本章目标：完成 abj.png，并检查浅色、深色、横屏和竖屏版本。"}
+#layouts h2:after{content:"本章目标：看懂 KEY 辅助图，正确制作普通状态和按下状态。"}
+#day-night h2:after{content:"本章目标：把 light 与 dark 当成两套独立素材逐项完成。"}
+#animation h2:after{content:"本章目标：先确认 anim.ini 的引用，再替换动效图片并逐项测试参数。"}
+#replace h2:after{content:"本章目标：继续处理前景、Logo、文字颜色和音效等素材。"}
+#trouble h2:after{content:"本章目标：正确压缩、导入和测试，并能从常见原因开始排错。"}
+#layouts{order:8}#sticker-tools{order:9}#day-night{order:10}#animation{order:11}#replace{order:12}#trouble{order:13}#faq{order:14}footer{order:15}
+figure:has(img[src="/tutorial/file-map.jpg"]){display:none}
+.reference-table-wrap{margin-top:45px}.reference-table-wrap>h3{font-size:30px;margin-bottom:8px}.reference-table-wrap>p{color:#888;font-size:12px}.reference-table{margin-top:24px;border:1px solid var(--line)}.reference-table>div{display:grid;grid-template-columns:.8fr 1.2fr 1.5fr 1.5fr;border-bottom:1px solid var(--line)}.reference-table>div:last-child{border-bottom:0}.reference-table>div>*{margin:0;padding:14px;border-right:1px solid var(--line);font-size:12px;line-height:1.55}.reference-table>div>*:last-child{border-right:0}.reference-head{background:var(--acid);color:var(--black)}.reference-table span{font-weight:800}.reference-table code{color:var(--acid)}.reference-table small{color:#888}
+.optional-effects{margin-top:30px}.optional-effects>h3{font-size:28px}.optional-effects>div{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#999}.optional-effects article{padding:20px;background:#e8e8e3;min-height:210px}.optional-effects b{display:block;margin-bottom:80px}.optional-effects p{font-size:12px;line-height:1.65;color:#555}.static-warning{padding:24px;background:var(--black);color:var(--white);line-height:1.75}.static-warning code{color:var(--acid)}
+.faq-section{background:#0b0b0b}.faq-list{border-top:1px solid var(--line)}.faq-list details{border-color:var(--line)}.faq-list summary{color:var(--white)}.faq-list details>div{color:#aaa}.faq-list code{color:var(--acid)}
+.sticker-tools{background:#ecece7;color:#090909}.sticker-tools .chapter-kicker{color:#555}.sticker-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#999}.sticker-overview article{min-height:230px;padding:20px;background:#ecece7}.sticker-overview article:nth-child(even){background:#d0d0cb}.sticker-overview b{font:700 11px Consolas}.sticker-overview h3{margin:100px 0 7px}.sticker-overview p{font-size:12px;line-height:1.6;color:#666}.tool-lessons{margin-top:50px;border-top:1px solid #999}.tool-lessons>article{display:grid;grid-template-columns:110px 1fr 1.4fr;gap:25px;padding:30px 0;border-bottom:1px solid #999}.tool-lessons span{font:700 11px Consolas}.tool-lessons h3{margin:0;font-size:26px}.tool-lessons ol{margin:0;line-height:1.8;color:#555}.tool-tip{grid-column:2/4;padding:16px;background:#090909;color:#eee;font-size:12px;line-height:1.6}.sticker-check{margin-top:30px;padding:28px;background:var(--acid);color:var(--black)}.sticker-check h3{margin-top:0}.sticker-check ul{margin-bottom:0;line-height:1.9}
+@media(max-width:900px){
+  .outline-grid{grid-template-columns:1fr 1fr!important}
+  .outline-heading{grid-template-columns:1fr!important}
+  .outline-route{align-items:flex-start!important;flex-direction:column}
+  .outline-route strong{margin:0!important}
+  .outline-route i{display:none}
+  .reference-table>div{grid-template-columns:1fr 1fr}.reference-head{display:none}.optional-effects>div{grid-template-columns:1fr 1fr}
+  .sticker-overview{grid-template-columns:1fr 1fr}.tool-lessons>article{grid-template-columns:80px 1fr}.tool-lessons ol{grid-column:1/3}.tool-tip{grid-column:1/3}
+}
+@media(max-width:540px){
+  .course-outline{padding:72px 20px!important}
+  .outline-grid{grid-template-columns:1fr!important}
+  .outline-heading h2{font-size:48px!important}
+  .reference-table>div{display:block}.reference-table>div>*{display:block;border-right:0;border-bottom:1px solid var(--line)}.optional-effects>div{grid-template-columns:1fr}
+  .sticker-overview{grid-template-columns:1fr}.tool-lessons>article{display:block}.tool-lessons h3{margin:10px 0 20px}.tool-tip{margin-top:16px}
+}
